@@ -1,4 +1,4 @@
-package test.demo.j2se;
+package test.demo.j2se.classcode;
 
 public class IPlusTest {
 
