@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">  
+    <bean id="proxy" class="org.springframework.jmx.access.MBeanProxyFactoryBean">  
+        <property name="connectOnStartup" value="true" />  
+        <property name="objectName" value="annojmx:myjao=AnnotationObject" />  
+        <property name="proxyInterface">  
+            <value>demo.learn.jmx.spring.annotation.MyInterface</value>  
+        </property> 
+        <property name="serviceUrl">  
+            <value>service:jmx:rmi://localhost/jndi/rmi://localhost:1099/jmxrmi</value>  
+        </property>  
+    </bean>  
+</beans>  

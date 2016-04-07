@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="mbServer" class="org.springframework.jmx.export.MBeanExporter">
+		<property name="beans">
+			<map>
+				<entry key="MyappMBean:name=My" value-ref="myMBean" />
+			</map>
+		</property>
+		<property name="assembler" ref="assembler"></property>
+	</bean>
+	
+	<bean name="myMBean" class="demo.learn.jmx.standard.My">
+		<property name="name">
+			<value>test</value>
+		</property>
+	</bean>
+
+	<bean id="assembler"
+		class="org.springframework.jmx.export.assembler.MethodNameBasedMBeanInfoAssembler">
+		<property name="managedMethods" value="getName, getStatus" />
+	</bean>
+</beans> 
