@@ -1,14 +1,3 @@
-/*
- * 版权所有 (C) 2016 铂涛集团。
- * 本文件可能包含有铂涛集团的机密或专有信息。
- * 未经许可不得擅自公开、复制这些机密资料及其中任何部分，
- * 只可按照其使用许可协议，在铂涛集团内部使用。
- * 
- * 公司主页：http://www.plateno.com/
- *
- * Creation Date: 2016年3月23日 下午3:37:13
- * $Id$
- */
 package demo.learn.redis.jedis;
 
 import redis.clients.jedis.Jedis;
@@ -17,7 +6,7 @@ import redis.clients.jedis.JedisPoolConfig;
 
 /**
  * 包装Redis连接池的工具类
- * @author xialei (lei.xia@pp.plateno.cc)
+ * @author xialei 
  * @date 2016年3月23日 下午3:37:13 
  * @since JDK 1.7
  */
