@@ -1,4 +1,4 @@
-package test.demo.jvm.memoryanalyze;
+package demo.learn.jvm.memoryanalyze;
 
 public class Person {
 
