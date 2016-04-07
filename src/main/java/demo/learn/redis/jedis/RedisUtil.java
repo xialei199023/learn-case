@@ -9,7 +9,7 @@
  * Creation Date: 2016年3月23日 下午3:37:13
  * $Id$
  */
-package xialei.demo.learn.redis.jedis;
+package demo.learn.redis.jedis;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;

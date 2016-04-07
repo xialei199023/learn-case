@@ -1,19 +1,19 @@
-package xialei.demo.learn.jdk.reflect.method;
+package demo.learn.jdk.reflect.method;
 
 import java.lang.reflect.Method;
 
 /**
- * Ê¹ÓÃ·ºÐÍµ÷ÓÃÀàµÄË½ÓÐ·½·¨
+ * Ê¹ï¿½Ã·ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë½ï¿½Ð·ï¿½ï¿½ï¿½
  *
  * @author xialei (lei.xia@pp.plateno.cc)
- * @date 2016Äê3ÔÂ22ÈÕ ÉÏÎç9:53:14 
+ * @date 2016ï¿½ï¿½3ï¿½ï¿½22ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½9:53:14 
  */
 public class InvokeProvateMethod {
 
 	public static void main(String[] args) throws Exception {
 		Class<IncludePrivateMethodClass> clazz = IncludePrivateMethodClass.class;
 		Method method = clazz.getDeclaredMethod("privateMethodParamInt", int.class);
-		method.setAccessible(true); // ÉèÖÃÎª¿É·ÃÎÊ
+		method.setAccessible(true); // ï¿½ï¿½ï¿½ï¿½Îªï¿½É·ï¿½ï¿½ï¿½
 		
 		IncludePrivateMethodClass instance = clazz.newInstance();
 		String result = (String)method.invoke(instance, 23);

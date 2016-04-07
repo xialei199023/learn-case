@@ -9,7 +9,7 @@
  * Creation Date: 2016年3月23日 下午3:35:13
  * $Id$
  */
-package xialei.demo.learn.redis.jedis;
+package demo.learn.redis.jedis;
 
 import java.util.HashMap;
 import java.util.Iterator;

@@ -9,7 +9,7 @@
  * Creation Date: 2016年3月31日 下午6:01:52
  * $Id$
  */
-package xialei.demo.learn.jvm.objectsize;
+package demo.learn.jvm.objectsize;
 
 import java.lang.instrument.Instrumentation;
 import java.lang.reflect.Array;
