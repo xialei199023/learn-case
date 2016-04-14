@@ -36,7 +36,7 @@ public class MyMBeanServer {
 		mBeanServer.registerMBean(controller, new ObjectName(
 				"MyappMBean:name=My"));
 		
-		// 启动一个服务，所得远程客户端可以连接并且管理MBeanServer所注册MBean。
+		// 创建一个连接器，使得远程客户端可以连接并且管理MBeanServer所注册MBean。
 		JMXServiceURL url = new JMXServiceURL("rmi", "127.0.0.1", 9589, "/jndi/rmi://localhost:" + 1099 + "/app");  
 		System.out.println(url);
 
