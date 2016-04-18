@@ -6,7 +6,16 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>learn-case</name>
 	<description>平常学习中写的一些小Demo，通常是一个或几个Java文件，目的是记录一些常用的、有用的代码片段，同时也是学习笔记。</description>
-
+	
+	<profiles>
+		<profile>
+		</profile>
+	</profiles>
+	
+	<properties>
+		<version.jackson>2.6.1</version.jackson>
+	</properties>
+	
 	<dependencies>
 
 		<!-- redis client -->
@@ -22,7 +31,7 @@
 			<artifactId>spring-core</artifactId>
 			<version>4.2.0.RELEASE</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -38,5 +47,23 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- jackson lib -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${version.jackson}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${version.jackson}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${version.jackson}</version>
+		</dependency>
 	</dependencies>
 </project>
