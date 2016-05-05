@@ -48,15 +48,17 @@ public class ActiveMqConsumer {
             // 获取session注意参数值xingbo.xu-queue是一个服务器的queue，须在在ActiveMq的console配置  
             destination = session.createQueue("ota_queue");  
             consumer = session.createConsumer(destination);  
-            while (true) {  
+            //while (true) {  
                 // 设置接收者接收消息的时间，为了便于测试，这里谁定为100s  
                 Object message = consumer.receive(100000);  
+                
                 if (null != message) {  
                     System.out.println("收到消息" + message.toString());  
+                    System.out.println("getClass=="+message.getClass());
                 } else {  
-                    break;  
+                    //break;  
                 }  
-            }  
+            //}  
         } catch (Exception e) {  
             e.printStackTrace();  
         } finally {  

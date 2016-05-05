@@ -30,7 +30,7 @@ public class SimpleJMSReceiver {
 	}
 
 	public void receive(TextMessage message) throws JmsException, JMSException {
-		System.out.println(message.getStringProperty("phrCode"));
+		//System.out.println(message.getStringProperty("phrCode"));
 		System.out.println(message.getText());
 	}
 
