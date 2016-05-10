@@ -11,8 +11,6 @@
 package demo.learn.aop.spring.config;
 
 import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
 
 
 /**
