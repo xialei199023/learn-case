@@ -38,6 +38,11 @@
 			<version>4.2.0.RELEASE</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>4.2.5.RELEASE</version>
+		</dependency>
 
 		<!-- test -->
 		<dependency>
@@ -66,6 +71,12 @@
 			<version>${version.jackson}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-core</artifactId>
+			<version>5.7.0</version>
+		</dependency>
+		
 		<!-- aop -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -78,5 +89,36 @@
 			<artifactId>aspectjrt</artifactId>
 			<version>1.8.6</version>
 		</dependency>
+
 	</dependencies>
+
+
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.2.1</version>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<goals>
+								<goal>jar-no-fork</goal>
+							</goals>
+							<phase>package</phase>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
