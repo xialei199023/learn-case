@@ -7,6 +7,7 @@
 	<name>learn-case</name>
 	<description>平常学习中写的一些小Demo，通常是一个或几个Java文件，目的是记录一些常用的、有用的代码片段，同时也是学习笔记。</description>
 
+
 	<profiles>
 		<profile>
 		</profile>
@@ -70,13 +71,13 @@
 			<artifactId>jackson-annotations</artifactId>
 			<version>${version.jackson}</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-core</artifactId>
 			<version>5.7.0</version>
 		</dependency>
-		
+
 		<!-- aop -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
