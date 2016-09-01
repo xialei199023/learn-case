@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd
+       					   http://code.alibabatech.com/schema/dubbo  
+       					   http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+       					   http://www.springframework.org/schema/context
+       					   http://www.springframework.org/schema/context/spring-context.xsd"
+	default-autowire="byName">
+
+	<description>dubbo服务消费端</description>
+
+	<!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+	<dubbo:application name="dubbo-consumer" />
+
+	<!-- 把服务器方和提供方都注册到了zookeeper上统一管理 -->
+	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" 
+		file="/data/output/cache"/>
+
+	<!-- 生成远程服务代理，可以和本地bean一样使用远端服务 -->
+	<!-- attention 经测试，服务消费端必须使用与提供端完全相同的interface,原因未知  -->
+	<dubbo:reference id="student" interface="demo.learn.dubbo.spring.Student" />
+
+	<dubbo:consumer timeout="5000" retries="1" check="false" />
+</beans>
